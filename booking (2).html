@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip | PasaHero</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-text">PasaHero</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1 class="display-4 fw-bold">Book Your Adventure</h1>
+            <p class="lead">Secure your dream vacation with the cheapest travel deals in the Philippines</p>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="booking-card fade-in">
+                        <div class="booking-header">
+                            <h2>Complete Your Booking</h2>
+                            <p class="mb-0">Fill out the form below to reserve your trip</p>
+                        </div>
+                        <div class="booking-body">
+                            <!-- Success Message (hidden by default) -->
+                            <div class="booking-success" id="bookingSuccess">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Booking Confirmed!</h3>
+                                <p class="lead">Thank you for choosing PasaHero</p>
+                                <p>Your booking reference is: <strong>PH-2023-<span id="bookingRef"></span></strong></p>
+                                <p>We've sent a confirmation email with all the details.</p>
+                                <a href="index.html" class="btn btn-dark mt-3">Back to Home</a>
+                            </div>
+                            
+                            <!-- Booking Form -->
+                            <form id="bookingForm" class="needs-validation" novalidate>
+                                <!-- Trip Details Section -->
+                                <div class="form-section fade-in delay-1">
+                                    <h3 class="section-title">Trip Details</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="destination" class="form-label">Destination</label>
+                                            <select class="form-select" id="destination" required>
+                                                <option value="" selected disabled>Select Destination</option>
+                                                <option value="boracay">Boracay Island</option>
+                                                <option value="palawan">Palawan</option>
+                                                <option value="bohol">Bohol</option>
+                                                <option value="siargao">Siargao</option>
+                                                <option value="batanes">Batanes</option>
+                                                <option value="cebu">Cebu</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a destination
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="package" class="form-label">Package Type</label>
+                                            <select class="form-select" id="package" required>
+                                                <option value="" selected disabled>Select Package</option>
+                                                <option value="basic">Basic (Accommodations + Transfers)</option>
+                                                <option value="standard">Standard (Basic + Some Meals)</option>
+                                                <option value="premium">Premium (Standard + Tours)</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a package type
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="checkIn" class="form-label">Check-In Date</label>
+                                            <input type="date" class="form-control" id="checkIn" required>
+                                            <div class="invalid-feedback">
+                                                Please select a check-in date
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="checkOut" class="form-label">Check-Out Date</label>
+                                            <input type="date" class="form-control" id="checkOut" required>
+                                            <div class="invalid-feedback">
+                                                Please select a check-out date
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="adults" class="form-label">Adults (12+ years)</label>
+                                            <select class="form-select" id="adults" required>
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6+</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="children" class="form-label">Children (0-11 years)</label>
+                                            <select class="form-select" id="children">
+                                                <option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Personal Information Section -->
+                                <div class="form-section fade-in delay-2">
+                                    <h3 class="section-title">Personal Information</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your first name
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your last name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                            <div class="invalid-feedback">
+                                                Please enter a valid email address
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your phone number
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="specialRequests" class="form-label">Special Requests</label>
+                                        <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Payment Section -->
+                                <div class="form-section fade-in delay-3">
+                                    <h3 class="section-title">Payment Information</h3>
+                                    <div class="payment-methods">
+                                        <div class="payment-method active" onclick="selectPayment('credit')">
+                                            <i class="far fa-credit-card"></i>
+                                            <span>Credit Card</span>
+                                        </div>
+                                        <div class="payment-method" onclick="selectPayment('paypal')">
+                                            <i class="fab fa-cc-paypal"></i>
+                                            <span>PayPal</span>
+                                        </div>
+                                        <div class="payment-method" onclick="selectPayment('gcash')">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>GCash</span>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="paymentMethod" value="credit" required>
+                                    
+                                    <!-- Credit Card Fields (shown by default) -->
+                                    <div id="creditCardFields">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="cardNumber" class="form-label">Card Number</label>
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter a valid card number
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="cardName" class="form-label">Name on Card</label>
+                                                <input type="text" class="form-control" id="cardName" placeholder="Juan Dela Cruz" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter the name on card
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="expiryMonth" class="form-label">Expiry Month</label>
+                                                <select class="form-select" id="expiryMonth" required>
+                                                    <option value="" selected disabled>MM</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select expiry month
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="expiryYear" class="form-label">Expiry Year</label>
+                                                <select class="form-select" id="expiryYear" required>
+                                                    <option value="" selected disabled>YY</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select expiry year
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="cvv" class="form-label">CVV</label>
+                                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter CVV
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- PayPal Fields (hidden by default) -->
+                                    <div id="paypalFields" style="display: none;">
+                                        <div class="alert alert-info">
+                                            You will be redirected to PayPal to complete your payment after submitting this form.
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- GCash Fields (hidden by default) -->
+                                    <div id="gcashFields" style="display: none;">
+                                        <div class="alert alert-info">
+                                            You will receive payment instructions via SMS after submitting this form.
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="gcashNumber" class="form-label">GCash Mobile Number</label>
+                                            <input type="tel" class="form-control" id="gcashNumber" placeholder="0917 123 4567" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your GCash number
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Booking Summary -->
+                                <div class="booking-summary fade-in delay-3">
+                                    <h5 class="mb-3">Booking Summary</h5>
+                                    <div class="summary-item">
+                                        <span>Package:</span>
+                                        <span id="summaryPackage">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Duration:</span>
+                                        <span id="summaryDuration">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Travelers:</span>
+                                        <span id="summaryTravelers">-</span>
+                                    </div>
+                                    <div class="summary-item summary-total">
+                                        <span>Total:</span>
+                                        <span id="summaryTotal">₱0.00</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Terms and Submit -->
+                                <div class="form-check mb-4 fade-in delay-3">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-book">Complete Booking</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Booking and Payment</h6>
+                    <p>All bookings are subject to availability. A deposit may be required to secure your reservation. Full payment is due before the travel date unless otherwise specified.</p>
+                    
+                    <h6>2. Cancellation Policy</h6>
+                    <p>Cancellations made more than 30 days prior to departure will receive a full refund minus a 10% administration fee. Cancellations made within 30 days are subject to the following penalties:</p>
+                    <ul>
+                        <li>30-15 days before departure: 50% of total cost</li>
+                        <li>14-7 days before departure: 75% of total cost</li>
+                        <li>Less than 7 days before departure: 100% of total cost</li>
+                    </ul>
+                    
+                    <h6>3. Changes to Bookings</h6>
+                    <p>Changes to bookings are subject to availability and may incur additional charges. Name changes are considered cancellations and new bookings.</p>
+                    
+                    <h6>4. Travel Documents</h6>
+                    <p>It is the traveler's responsibility to ensure they have valid travel documents including passports, visas, and health certificates where required.</p>
+                    
+                    <h6>5. Travel Insurance</h6>
+                    <p>We strongly recommend purchasing comprehensive travel insurance to cover unforeseen circumstances.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Information We Collect</h6>
+                    <p>We collect personal information including name, contact details, payment information, and travel preferences to process your booking and provide our services.</p>
+                    
+                    <h6>2. How We Use Your Information</h6>
+                    <p>Your information is used to:</p>
+                    <ul>
+                        <li>Process bookings and payments</li>
+                        <li>Communicate about your trip</li>
+                        <li>Improve our services</li>
+                        <li>Send marketing communications (you can opt out anytime)</li>
+                    </ul>
+                    
+                    <h6>3. Data Security</h6>
+                    <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, or disclosure.</p>
+                    
+                    <h6>4. Sharing Information</h6>
+                    <p>We only share your information with third parties necessary to fulfill your booking (e.g., hotels, airlines) and as required by law.</p>
+                    
+                    <h6>5. Your Rights</h6>
+                    <p>You have the right to access, correct, or delete your personal information. Contact us at privacy@pasahero.com for any requests.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">PasaHero</h5>
+                    <p>Providing the cheapest travel deals across the Philippines since 2015.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Contact</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Ayala Avenue, Makati</li>
+                        <li><i class="fas fa-phone"></i> +63 (2) 8123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pasahero.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 PasaHero. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for budget travelers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

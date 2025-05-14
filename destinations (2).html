@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasaHero | Budget Travel Destinations</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/destinations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-text">PasaHero</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1 class="display-4 fw-bold">Explore Our Destinations</h1>
+            <p class="lead">Discover the cheapest travel deals across the Philippines with PasaHero</p>
+            <a href="#destinations" class="btn btn-outline-light btn-lg mt-3 pulse">View Packages</a>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="filter-card fade-in">
+                        <h5 class="filter-title">Find Your Perfect Trip</h5>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="destination" class="form-label">Destination</label>
+                                    <select class="form-select" id="destination">
+                                        <option selected>All Destinations</option>
+                                        <option>Boracay</option>
+                                        <option>Palawan</option>
+                                        <option>Bohol</option>
+                                        <option>Cebu</option>
+                                        <option>Siargao</option>
+                                        <option>Batanes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="travel-date" class="form-label">Travel Date</label>
+                                    <input type="date" class="form-control" id="travel-date">
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="duration" class="form-label">Duration</label>
+                                    <select class="form-select" id="duration">
+                                        <option selected>Any Duration</option>
+                                        <option>Weekend (2-3 days)</option>
+                                        <option>Short Break (4-5 days)</option>
+                                        <option>Week-long (6-8 days)</option>
+                                        <option>Extended (9+ days)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <label for="price-range" class="form-label">Price Range</label>
+                                    <select class="form-select" id="price-range">
+                                        <option selected>Any Price</option>
+                                        <option>Under ₱3,000</option>
+                                        <option>₱3,000 - ₱5,000</option>
+                                        <option>₱5,000 - ₱8,000</option>
+                                        <option>Over ₱8,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-dark btn-lg">Search Packages</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations-section" id="destinations">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <span class="subheading fade-in">Budget-Friendly Selection</span>
+                    <h2 class="section-heading slide-in-left">Our Travel Packages</h2>
+                    <div class="divider mx-auto"></div>
+                    <p class="lead fade-in">Explore our handpicked selection of the cheapest travel deals across the Philippines. All packages include accommodations, transportation, and some meals.</p>
+                </div>
+            </div>
+
+            <!-- Featured Destination -->
+            <div class="row mb-5 fade-in">
+                <div class="col-12">
+                    <div class="featured-destination">
+                        <img src="assets/imgs/2.jpg" alt="Palawan" class="featured-image">
+                        <div class="featured-content">
+                            <span class="featured-badge">FEATURED DESTINATION</span>
+                            <h3>Palawan Ultimate Adventure</h3>
+                            <p>Explore Puerto Princesa Underground River, El Nido's lagoons, and Coron's shipwrecks in this 7-day island-hopping adventure.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price h4">₱6,999</span>
+                                    <span class="duration ms-3">7 days / 6 nights</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-light">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/1.jpg" class="card-img-top" alt="Boracay">
+                        <div class="card-body">
+                            <span class="badge mb-2">BEACH</span>
+                            <h4 class="card-title">Boracay Island Escape</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ms-2">4.5 (128)</span>
+                            </div>
+                            <p class="card-text">Enjoy 4 days in the world-famous White Beach with budget accommodations just minutes from the shore.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip airfare</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 3 nights hotel stay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Daily breakfast</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Island hopping tour</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱3,999</span>
+                                    <span class="duration ms-2">4 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/3.jpg" class="card-img-top" alt="Bohol">
+                        <div class="card-body">
+                            <span class="badge mb-2">NATURE</span>
+                            <h4 class="card-title">Bohol Countryside Tour</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="ms-2">4.0 (95)</span>
+                            </div>
+                            <p class="card-text">3-day tour of Chocolate Hills, tarsier sanctuary, Loboc River cruise, and Panglao Island beaches.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip ferry tickets</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 2 nights accommodation</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Full countryside tour</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Loboc River lunch cruise</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱3,299</span>
+                                    <span class="duration ms-2">3 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/5.webp" class="card-img-top" alt="Siargao">
+                        <div class="card-body">
+                            <span class="badge mb-2">ADVENTURE</span>
+                            <h4 class="card-title">Siargao Surf Package</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ms-2">5.0 (76)</span>
+                            </div>
+                            <p class="card-text">5-day surf adventure in Cloud 9 with island hopping to Sugba Lagoon, Daku Island, and more.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip airfare</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 4 nights hostel stay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Surfboard rental</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Island hopping tour</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱5,499</span>
+                                    <span class="duration ms-2">5 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/6.webp" alt="Batanes">
+                        <div class="card-body">
+                            <span class="badge mb-2">CULTURE</span>
+                            <h4 class="card-title">Batanes Cultural Tour</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ms-2">4.7 (62)</span>
+                            </div>
+                            <p class="card-text">4-day immersion in Ivatan culture with visits to stone houses, lighthouses, and breathtaking vistas.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip airfare</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 3 nights homestay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Full island tour</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Cultural activities</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱7,299</span>
+                                    <span class="duration ms-2">4 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/7.webp" class="card-img-top" alt="Cebu">
+                        <div class="card-body">
+                            <span class="badge mb-2">CITY & BEACH</span>
+                            <h4 class="card-title">Cebu Getaway</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="ms-2">4.0 (112)</span>
+                            </div>
+                            <p class="card-text">5-day combination of city sights, waterfalls, and beach relaxation in Mactan and Bantayan Island.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip airfare</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 4 nights hotel stay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> City and countryside tours</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Ferry to Bantayan Island</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱4,799</span>
+                                    <span class="duration ms-2">5 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/8.jpg" class="card-img-top" alt="Sagada">
+                        <div class="card-body">
+                            <span class="badge mb-2">MOUNTAIN</span>
+                            <h4 class="card-title">Sagada Adventure</h4>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ms-2">5.0 (54)</span>
+                            </div>
+                            <p class="card-text">3-day mountain retreat with caving, hiking to Bomod-Ok Falls, and sunrise at Kiltepan Peak.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i> Roundtrip bus tickets</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 2 nights lodge stay</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Guided caving tour</li>
+                                <li><i class="fas fa-check text-success me-2"></i> All entrance fees</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">₱2,999</span>
+                                    <span class="duration ms-2">3 days</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-outline-dark">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="subheading fade-in">Special Offers</span>
+                    <h2 class="section-heading text-white slide-in-right">Get Exclusive Travel Deals</h2>
+                    <div class="divider mx-auto"></div>
+                    <p class="mb-5 fade-in">Subscribe to our newsletter and be the first to know about our flash sales and exclusive discounts.</p>
+                    <form class="newsletter-form row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn w-100">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">PasaHero</h5>
+                    <p>Providing the cheapest travel deals across the Philippines since 2015.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Contact</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Ayala Avenue, Makati</li>
+                        <li><i class="fas fa-phone"></i> +63 (2) 8123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pasahero.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 PasaHero. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for budget travelers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>

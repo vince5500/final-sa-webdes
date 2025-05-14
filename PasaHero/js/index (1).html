@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasaHero | Budget Travel Deals</title>
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">   
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-text">PasaHero</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <header class="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/imgs/1.jpg" class="d-block w-100" alt="Philippine beach destination">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold slide-in-right">PasaHero</h1>
+                        <p class="lead fade-in-up">Cheapest Travel Deals in the Philippines</p>
+                        <a href="booking.html" class="btn btn-outline-light btn-lg mt-3 pulse">Plan Your Journey</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/imgs/2.jpg" class="d-block w-100" alt="Philippine mountain destination">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold slide-in-right">DISCOVER PHILIPPINES</h1>
+                        <p class="lead fade-in-up">Amazing Destinations, Unbeatable Prices</p>
+                        <a href="destinations.html" class="btn btn-outline-light btn-lg mt-3 pulse">Explore Destinations</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/imgs/3.jpg" class="d-block w-100" alt="Philippine cityscape">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold slide-in-right">TRAVEL FOR LESS</h1>
+                        <p class="lead fade-in-up">Budget-Friendly Getaways</p>
+                        <a href="about.html" class="btn btn-outline-light btn-lg mt-3 pulse">Our Story</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Featured Destinations Section -->
+    <section class="featured-destinations py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <span class="subheading fade-in">Budget-Friendly Selection</span>
+                    <h2 class="section-heading slide-in-left">Popular Destinations</h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/1.jpg" class="card-img-top" alt="Boracay">
+                        <div class="card-body">
+                            <span class="badge bg-dark mb-2">BEACH</span>
+                            <h5 class="card-title">Boracay Island</h5>
+                            <p class="card-text">Experience the world-famous white sand beaches and vibrant nightlife of Boracay at budget-friendly prices.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From ₱3,999</span>
+                                <a href="destinations.html" class="btn btn-outline-dark">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/2.jpg" class="card-img-top" alt="Palawan">
+                        <div class="card-body">
+                            <span class="badge bg-dark mb-2">ADVENTURE</span>
+                            <h5 class="card-title">Palawan</h5>
+                            <p class="card-text">Explore the stunning lagoons, underground rivers, and pristine waters of the Philippines' last frontier.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From ₱4,499</span>
+                                <a href="destinations.html" class="btn btn-outline-dark">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card destination-card h-100">
+                        <img src="assets/imgs/3.jpg" class="card-img-top" alt="Bohol">
+                        <div class="card-body">
+                            <span class="badge bg-dark mb-2">NATURE</span>
+                            <h5 class="card-title">Bohol</h5>
+                            <p class="card-text">Visit the iconic Chocolate Hills, tarsiers, and enjoy river cruises in this beautiful island province.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">From ₱3,299</span>
+                                <a href="destinations.html" class="btn btn-outline-dark">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="destinations.html" class="btn btn-dark btn-lg">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Experience Section -->
+    <section class="travel-experience bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="content-block slide-in-left">
+                        <span class="subheading">Why Choose Us</span>
+                        <h2 class="section-heading">The PasaHero Advantage</h2>
+                        <div class="divider mb-4"></div>
+                        <div class="experience-feature d-flex align-items-start mb-4">
+                            <div class="icon-box me-4">
+                                <i class="fas fa-peso-sign"></i>
+                            </div>
+                            <div>
+                                <h5>Lowest Price Guarantee</h5>
+                                <p>We promise the cheapest travel deals in the Philippines or we'll match the difference.</p>
+                            </div>
+                        </div>
+                        <div class="experience-feature d-flex align-items-start mb-4">
+                            <div class="icon-box me-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div>
+                                <h5>No Hidden Fees</h5>
+                                <p>Transparent pricing with no surprise charges - you pay exactly what you see.</p>
+                            </div>
+                        </div>
+                        <div class="experience-feature d-flex align-items-start">
+                            <div class="icon-box me-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h5>24/7 Customer Support</h5>
+                                <p>Our team is always available to assist you with your travel needs and concerns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image-frame fade-in">
+                        <img src="assets/imgs/4.jpeg" alt="Happy travelers" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <span class="subheading fade-in">Customer Stories</span>
+                    <h2 class="section-heading slide-in-right">What Our Travelers Say</h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-item text-center p-4">
+                                    <div class="quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">"Our Boracay vacation was amazing and half the price we expected to pay! PasaHero found us the perfect budget-friendly resort with great amenities."</p>
+                                    <div class="client">
+                                        <h5>Maria & Juan Dela Cruz</h5>
+                                        <span>Anniversary Trip</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-item text-center p-4">
+                                    <div class="quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">"As a student on a tight budget, I thought I couldn't afford to travel. PasaHero proved me wrong with their amazing deals to Palawan!"</p>
+                                    <div class="client">
+                                        <h5>Carlos Reyes</h5>
+                                        <span>Student Traveler</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-item text-center p-4">
+                                    <div class="quote">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p class="testimonial-text">"Our family of five traveled to Bohol for less than we would normally pay for two people. The accommodations were perfect and the itinerary was well-planned."</p>
+                                    <div class="client">
+                                        <h5>The Santos Family</h5>
+                                        <span>Family Vacation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators testimonial-indicators">
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading text-white mb-4 slide-in-left">Start Your Adventure</h2>
+                    <p class="text-white mb-5 fade-in">Don't let budget constraints stop you from exploring the beauty of the Philippines. Our travel experts are ready to find you the best deals.</p>
+                    <a href="booking.html" class="btn btn-outline-light btn-lg pulse">Book Now & Save</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">PasaHero</h5>
+                    <p>Providing the cheapest travel deals across the Philippines since 2015.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Contact</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Ayala Avenue, Makati</li>
+                        <li><i class="fas fa-phone"></i> +63 (2) 8123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pasahero.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-heading">Newsletter</h5>
+                    <p>Subscribe for exclusive travel deals and discounts.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                            <button class="btn btn-outline-light" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 PasaHero. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Privacy Policy | Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
